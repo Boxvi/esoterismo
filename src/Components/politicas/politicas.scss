@@ -1,0 +1,132 @@
+@import "../variables.scss";
+
+@import "../variables.scss";
+
+.politicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative; // Para posicionar el footer correctamente
+    padding-bottom: 4rem; // Espacio para el footer
+
+    &__heading {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: darken($color-primary, 10%);
+    }
+
+    &__subheading {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 1.2rem 0 0.8rem;
+        color: darken($color-primary, 5%);
+    }
+
+    &__disclaimer {
+        width: 100%;
+        background-color: rgba($color-primary, 0.05);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    &__paragraph {
+        letter-spacing: 1.2px;
+        margin-bottom: 1rem;
+        
+        & strong {
+            font-weight: 600;
+            color: darken($color-primary, 15%);
+        }
+    }
+
+    &__notice {
+        background-color: rgba($color-primary, 0.1);
+        padding: 1rem;
+        border-left: 4px solid darken($color-primary, 15%);
+        font-style: italic;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0.5rem 1.5rem;
+        padding-left: 1.5rem;
+
+        &-item {
+            margin-bottom: 0.6rem;
+            letter-spacing: 1.2px;
+            position: relative;
+            line-height: 1.5;
+            
+            &::before {
+                content: "•";
+                color: darken($color-primary, 15%);
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+    }
+
+    &__sublist {
+        margin: 0.8rem 0 1.5rem;
+        padding-left: 2rem;
+        list-style-type: none;
+
+        & li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.2rem;
+            
+            &::before {
+                content: "○";
+                color: darken($color-primary, 10%);
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    &__update {
+        font-size: 0.9rem;
+        color: lighten($color-primary, 20%);
+        margin-top: 2rem;
+        text-align: center;
+        font-style: italic;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: -2rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 1rem 0;
+        font-size: 0.85rem;
+        color: lighten($color-primary, 25%);
+        border-top: 1px solid rgba($color-primary, 0.2);
+        
+        & a {
+            color: darken($color-primary, 10%);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: darken($color-primary, 20%);
+                text-decoration: underline;
+            }
+        }
+    }
+}

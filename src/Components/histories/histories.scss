@@ -1,0 +1,76 @@
+@import "../variables.scss";
+
+.histories{
+    display: flex;
+    margin: auto;
+    width: 95%;
+    justify-content: space-around;
+    color: $color-secondary;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    letter-spacing: 1.2px;
+
+    .card{
+        background-color: rgba($color-secondary, .15);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: .5rem;
+        margin-bottom: 1rem;
+
+        img{
+            height: 10rem;
+            width: 10rem;
+            margin: .7rem auto;
+            border-radius: 10px;
+            //object-fit: scale-down;
+            //opacity: .7;
+            //border: 2px solid black;
+            //filter: invert(82%) sepia(66%) saturate(1%) hue-rotate(261deg) brightness(111%) contrast(73%);
+
+        }
+        p{
+            text-align: center;
+            margin: .3rem;
+            margin-bottom: 1rem;
+            padding: 0 .9rem;
+
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .histories{
+        flex-wrap: wrap;
+        
+        .card{
+            width: 45%;
+            margin-bottom: 1rem;
+
+            img{
+                height: 8rem;
+                width: 8rem;
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+    .histories{
+        flex-direction: column;
+        align-items: center;
+        //border: 1px solid white;
+        margin: 2rem auto;
+
+        .card{
+            width: 80%;
+            margin-bottom: 1.5rem;
+            //border: 1px solid white;
+
+            img{
+                height: 6rem;
+                width: 6rem;
+            }
+        }
+    }
+}

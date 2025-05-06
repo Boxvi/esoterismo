@@ -1,0 +1,188 @@
+@import "../variables.scss";
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-color: rgba($color-secondary, .15);
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+
+    &__heading{
+        color: $color-secondary;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: .4rem;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //align-items: center;
+        width: 90%;
+
+        &-input{
+            display: flex;
+            flex-direction: column;
+            //margin: .3rem .5rem;
+            width: 100%;
+            //justify-content: center;
+
+            &-name {
+                margin-right: 1rem;
+            }
+            &-telf{
+                &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+                    -webkit-appearance: none;
+                }
+            }
+            
+            &-name, &-email, &-telf{
+                border-radius: 5px;
+                border: none;
+                width: 60%;
+                height: 1.7rem;
+                margin-bottom: .8rem;
+                background-color: rgba($color-primary, .15);
+                color: $color-primary;
+                //padding-left: .3rem;
+                padding-left: 6px;
+                text-align: start;
+
+                &::placeholder{
+                    //text-align: left;
+                    //padding-left: 6px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+                &:focus{
+                    color: $color-primary;
+                    //padding-left: 6px;
+                    //padding-right: .1rem;
+                    //text-align: center;
+                }
+            }
+            &-telf{
+                width: 35%;
+            }
+        }
+        &-errors{
+            color: rgba(200,200,10, .75);
+            margin-left: .7rem;
+            margin-top: -.4rem;
+            margin-bottom: .5rem;
+            font-size: .7rem;
+
+            &_subject{
+                align-self: flex-start;
+                color: rgba(200,200,10, .75);
+                font-size: .7rem;
+                margin-left: 1rem;
+                margin-top: -.7rem;
+                margin-bottom: .5rem;
+            }
+        }
+
+        &-subject{
+            border-radius: 5px;
+            border: none;
+            background-color: rgba($color-primary, .15);
+            resize: none;
+            margin-bottom: 1rem;
+            width: 100%;
+            height: 6rem;
+            color: $color-primary;
+            padding-left: 6px;
+
+            &::placeholder{
+                text-align: left;
+                /* transform: translateY(-150%); */
+                //padding-left: .6rem;
+                padding-top: .3rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            &:focus{
+                color: $color-primary;
+                //text-align: center;
+            }
+        }
+        
+        &-button{
+            border: none;
+            align-self: center;
+            border-radius: 15px;
+            width: 10rem;
+            height: 2rem;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: $color-secondary;
+            background-color: rgba($color-secondary, .25);
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: all .3s;
+
+            &:hover{
+                background-color: rgba($color-primary, .25);
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .contact{
+        width: 90%;
+        font-size: 1rem;
+
+        &__heading{
+            letter-spacing: .2rem;
+        }
+    }
+}
+
+@media (max-width: 530px){
+    .contact{
+        width: 75%;
+
+        &__heading{
+            letter-spacing: 1.1px;
+        }
+
+        &__heading{
+            font-size: 1.2rem;
+        }
+        &__form{
+            &-input, &-subject{
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px){
+    .contact{
+        width: 80%;
+        &__heading{
+            font-size: 1rem;
+        }
+        &__form{
+
+            &-input, &-subject{
+                width: 95%;
+            }
+            &-input-telf{
+                width: 45%;
+            }
+        }
+    }
+}
